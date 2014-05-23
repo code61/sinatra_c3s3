@@ -7,12 +7,13 @@
   <h1>Event schedule</h1>
 
   <table>
+		<% @schedule.each do |time_task_pair| %>
     <tr>
-      <td>8pm</td>
-      <td>Doors open</td>
+			<td><%=time_task_pair.first %></td>
+			<td><%=time_task_pair.last %></td>
     </tr>
-    <!-- etc. etc. -->
-  </table>
+		<% end %>
+	</table>
 
 </body>
 </html>
