@@ -29,8 +29,18 @@ get '/rsvps' do
   @acceptance_count = 0
   @rejection_count  = 0
 
-  # TODO categorise rsvps into acceptances/rejections and count them
-
+# categorise rsvps into acceptances/rejections and count them 
+	@rsvps.each do |name_status_pair|
+		if name_status_pair.last == 'no'
+			@acceptances << name_status_pair.first
+			@acceptance_count = @acceptance_count + 1
+		else
+			if name_status_pair.last == 'yes'
+				@rejections << name_status_pair.first
+				@rejection_count = @rejection_count + 1
+			end
+		end
+	end
 
   erb :rsvps
 end
