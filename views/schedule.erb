@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Event Manager 2.0</title>
-  <link rel="stylesheet" href="/dist/css/bootstrap.css">
-</head>
-<body>
-  <h1>Event schedule</h1>
+<h1>Event schedule</h1>
 
-  <table>
-    <% @schedule.each do |row| %>
-    <tr>
-      <% row.each do |cell| %>
-        <td><%= cell %></td>
-      <% end %>
-    </tr>
+<table>
+  <% @schedule.each do |row| %>
+  <tr>
+    <% row.each do |cell| %>
+      <td><%= cell %></td>
     <% end %>
-  </table>
-
-</body>
-</html>
+  </tr>
+  <% end %>
+</table>
