@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Event Manager 2.0</title>
-</head>
-<body>
-  <h1>Invites</h1>
+<h1>Invites</h1>
 
-  <h2>Attendees (25)</h2>
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+<h2>Attendees (<%= @acceptance_count %>)</h2>
+<ul>
+  <% @acceptances.each do |person| %>
+    <li><%= person %></li>
+  <% end %>
+</ul>
 
-  <h2>Apologies (22)</h2>
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-
-
-</body>
-</html>
+<h2>Apologies (<%= @rejection_count %>)</h2>
+<ul>
+  <% @rejections.each do |person| %>
+    <li><%= person %></li>
+  <% end %>
+</ul>

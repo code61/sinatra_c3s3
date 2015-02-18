@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Event Manager 2.0</title>
-</head>
-<body>
-  <h1>Todo list</h1>
+<h1>Todo list</h1>
 
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-
-</body>
-</html>
+<ol>
+  <% @todos.each do |todo| %>
+    <li><%= todo %></li>
+  <% end %>
+</ol>
